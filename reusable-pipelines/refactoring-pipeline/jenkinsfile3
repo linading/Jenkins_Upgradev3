@@ -55,14 +55,14 @@ pipeline {
 
             steps {
                 archiveArtifacts('**/*.war')
-                
+                //publishing the artifact --> able to download in jenkins
             }
         }
     }
 
-   // post {
-   //     always {
-   //         cleanWs()
-   //     }
-   // }
+    post {
+        always {
+            cleanws()
+        }
+    }
 }
